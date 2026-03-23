@@ -57,7 +57,7 @@ cd /home/ssm-user/python-redis-docker-compose-intro
 
 15.  Clique em `Criar`
 16.  Devolta ao terminal do nó manager execute a sequência abaixo de comandos <b>UM POR UM</b> para que você monte a imagem docker e faça o push para o repositório récem criado.
-    ``` shel
+    ```shell
     accountID=`aws sts get-caller-identity | jq .Account -r`
     aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $accountID.dkr.ecr.us-east-1.amazonaws.com
     docker build -t app-counter .
